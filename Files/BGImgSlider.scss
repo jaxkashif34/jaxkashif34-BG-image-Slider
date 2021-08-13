@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@mixin BoxSizing($jscontent) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: $jscontent;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    @include BoxSizing(center);
+    background-image: linear-gradient(45deg, #000000, #2d3436);
+}
+#container {
+    font-family: "Merienda", cursive;
+    color: white;
+    width: 70vw;
+    height: 85vh;
+    text-align: center;
+    position: relative;
+}
+.imgContainer {
+    border: 8px solid skyblue;
+    border-radius: 10px;
+    min-height: 90%;
+    margin: auto;
+    max-width: 90%;
+    background: url("../images/contBcg-0.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 109%;
+}
+.fas {
+    position: absolute;
+    font-size: 30px;
+    background-color: #eee;
+    color: skyblue;
+    cursor: pointer;
+    &:hover {
+        color: #eee;
+        background-color: skyblue;
+    }
+}
+.fa-caret-square-left {
+    top: 50%;
+    left: 4%;
+}
+.fa-caret-square-right {
+    top: 50%;
+    right: 4%;
+}
