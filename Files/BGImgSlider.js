@@ -14,7 +14,7 @@ $(document).ready(function () {
         if (counter < 0) {
             counter = pictures.length - 1;
         }
-        $(".imgContainer").css("backgroundImage", `url('./images/${pictures[counter]}.jpg')`);
+        $("img").attr("src", `./images/${pictures[counter]}.jpg`);
     });
     $(".BtnRight").click(function (e) {
         e.preventDefault();
@@ -22,6 +22,6 @@ $(document).ready(function () {
         if (counter > pictures.length - 1) {
             counter = 0
         }
-        $(".imgContainer").css("backgroundImage", `url('./images/${pictures[counter]}.jpg')`);
+        $("img").attr("src", `./images/${pictures[counter]}.jpg`);
     });
 });
